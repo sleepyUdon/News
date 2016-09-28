@@ -20,7 +20,6 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var arrayOfArticles = [Article]()
 
     
-
     // MARK: ViewDidLoad
     
     override func viewDidLoad() {
@@ -89,7 +88,12 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.separatorStyle = .SingleLine
         let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
         tableView.frame =  CGRectMake(0, statusBarHeight, self.view.frame.width, self.view.frame.height-statusBarHeight)
-        tableView.sectionHeaderHeight = 50
+        tableView.sectionHeaderHeight = 35
+
+        let imageView = UIImageView(frame: CGRectMake(0, 0, 40, 27))
+        imageView.contentMode = .ScaleAspectFit
+        imageView.image = UIImage(named: "CBCLogo")
+        self.navigationItem.titleView = imageView
     }
     
 
@@ -101,11 +105,10 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let object = self.arrayOfArticles[indexPath.row]
                 let controller = segue.destinationViewController as! DetailViewController
                 controller.detailItem = object
-                
-
             }
         }
     }
+    
 
     // MARK: - Table View
     
@@ -138,7 +141,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // title for Header
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "News"
+        return "Toronto"
     }
     
     // format for title for Header
@@ -146,7 +149,7 @@ class MasterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
     {
         let title = UILabel()
-        title.font = UIFont(name: "GillSans-Bold", size: 22)!
+        title.font = UIFont(name: "Optima-ExtraBlack", size: 22)!
         let header = view as! UITableViewHeaderFooterView
         header.backgroundView?.backgroundColor = UIColor.whiteColor()
         header.textLabel?.font=title.font
