@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mRR-6r-tmJ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail-->
+        <scene sceneID="yUG-lL-AsK">
+            <objects>
+                <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="CBCNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SYR-Wa-9uf"/>
+                        <viewControllerLayoutGuide type="bottom" id="GAO-Cl-Wes"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ePr-Fl-8Kn">
+                                <rect key="frame" x="0.0" y="64" width="600" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="xcd-CU-3ur"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nbc-xm-FuL">
+                                <rect key="frame" x="30" y="324" width="540" height="266"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ePr-Fl-8Kn" secondAttribute="trailing" id="3Vz-kS-8BZ"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="Nbc-xm-FuL" secondAttribute="bottom" constant="10" id="8FS-d4-cjW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nbc-xm-FuL" secondAttribute="trailing" constant="10" id="BWv-VX-QXV"/>
+                            <constraint firstItem="Nbc-xm-FuL" firstAttribute="top" secondItem="ePr-Fl-8Kn" secondAttribute="bottom" constant="10" id="SFS-Po-rGt"/>
+                            <constraint firstItem="ePr-Fl-8Kn" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="dmc-Vh-qfN"/>
+                            <constraint firstItem="ePr-Fl-8Kn" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="lZT-4a-2Mk"/>
+                            <constraint firstItem="Nbc-xm-FuL" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="10" id="zOi-oV-Wfm"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="Nbc-xm-FuL" id="eNl-PW-Y6d"/>
+                        <outlet property="pictureView" destination="ePr-Fl-8Kn" id="I2p-CI-ulo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4521" y="375"/>
+        </scene>
+        <!--CBC News-->
+        <scene sceneID="Rmy-AX-8eA">
+            <objects>
+                <viewController title="CBC News" id="loP-FJ-Oy4" customClass="MasterViewController" customModule="CBCNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H3R-TA-zfr"/>
+                        <viewControllerLayoutGuide type="bottom" id="gsK-9X-7NO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Rn-vd-4Ll">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ELb-SL-5xX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="h3D-fz-jQ5" customClass="StoriesTableViewCell" customModule="CBCNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h3D-fz-jQ5" id="AqR-Ct-5jL">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="299"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cDv-4W-OQe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="202"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="202" id="y9h-MT-hEo"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8b-fa-DKG">
+                                                    <rect key="frame" x="20" y="225" width="560" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="aaW-oA-mGO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="cDv-4W-OQe" secondAttribute="trailing" id="0bb-2s-FgS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="c8b-fa-DKG" secondAttribute="trailing" constant="12" id="0c2-IH-6WW"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="c8b-fa-DKG" secondAttribute="bottom" constant="6" id="98b-fC-LyY"/>
+                                                <constraint firstItem="cDv-4W-OQe" firstAttribute="leading" secondItem="AqR-Ct-5jL" secondAttribute="leading" id="LWl-dw-39S"/>
+                                                <constraint firstItem="c8b-fa-DKG" firstAttribute="leading" secondItem="AqR-Ct-5jL" secondAttribute="leadingMargin" constant="12" id="okX-Et-TAK"/>
+                                                <constraint firstItem="cDv-4W-OQe" firstAttribute="top" secondItem="AqR-Ct-5jL" secondAttribute="top" id="wwB-Dn-04i"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pictureView" destination="cDv-4W-OQe" id="QQk-ZC-OkZ"/>
+                                            <outlet property="titleLabel" destination="c8b-fa-DKG" id="a42-IV-KUU"/>
+                                            <segue destination="EU6-D6-aAZ" kind="show" identifier="showDetail" id="aWo-ha-TMs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="loP-FJ-Oy4" id="j6o-7G-80s"/>
+                                    <outlet property="delegate" destination="loP-FJ-Oy4" id="NMJ-VP-6N6"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvS-8K-wT4">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="CBC News" id="oIS-Jh-weA">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="xpH-m8-2ok"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Weather" id="gKu-r0-srN"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tvS-8K-wT4" firstAttribute="top" secondItem="9Rn-vd-4Ll" secondAttribute="top" constant="20" id="TWH-tg-Be8"/>
+                            <constraint firstItem="gsK-9X-7NO" firstAttribute="top" secondItem="ELb-SL-5xX" secondAttribute="bottom" id="UX0-M9-tmq"/>
+                            <constraint firstItem="tvS-8K-wT4" firstAttribute="leading" secondItem="9Rn-vd-4Ll" secondAttribute="leading" id="bgH-9k-Kum"/>
+                            <constraint firstItem="ELb-SL-5xX" firstAttribute="leading" secondItem="9Rn-vd-4Ll" secondAttribute="leading" id="fvg-fb-QGN"/>
+                            <constraint firstItem="ELb-SL-5xX" firstAttribute="top" secondItem="tvS-8K-wT4" secondAttribute="bottom" constant="-64" id="gJ7-dW-fbK"/>
+                            <constraint firstAttribute="trailing" secondItem="ELb-SL-5xX" secondAttribute="trailing" id="hNR-zd-CLZ"/>
+                            <constraint firstAttribute="trailing" secondItem="tvS-8K-wT4" secondAttribute="trailing" id="vY5-j8-QGf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CBC News" id="pRy-Ps-c0N"/>
+                    <connections>
+                        <outlet property="tableView" destination="ELb-SL-5xX" id="XG4-59-dul"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTA-Ag-8dM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6291" y="-536"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Voj-3v-M3s">
+            <objects>
+                <viewController id="EU6-D6-aAZ" customClass="DetailViewController" customModule="CBCNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="epc-ed-y9S"/>
+                        <viewControllerLayoutGuide type="bottom" id="1JY-zK-xSG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jtr-jd-Xhs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VkD-Qh-na9">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VkD-Qh-na9" secondAttribute="trailing" id="ZoH-iR-hZB"/>
+                            <constraint firstItem="VkD-Qh-na9" firstAttribute="top" secondItem="epc-ed-y9S" secondAttribute="bottom" id="eI0-vE-EU6"/>
+                            <constraint firstItem="1JY-zK-xSG" firstAttribute="top" secondItem="VkD-Qh-na9" secondAttribute="bottom" id="f9q-q1-fkl"/>
+                            <constraint firstItem="VkD-Qh-na9" firstAttribute="leading" secondItem="jtr-jd-Xhs" secondAttribute="leading" id="xgT-OH-8Zd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="VkD-Qh-na9" id="yij-QX-YeJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="daj-FF-p1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6973" y="-536"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5P3-Da-Ofq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mRR-6r-tmJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5rr-r2-qen">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="loP-FJ-Oy4" kind="relationship" relationship="rootViewController" id="SQV-s6-njO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YwM-gK-pdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5479" y="-536"/>
+        </scene>
+    </scenes>
+</document>
