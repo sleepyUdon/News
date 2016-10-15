@@ -10,15 +10,8 @@ import UIKit
 
 class StoriesTableViewCell: UITableViewCell {
 
-    
-    
-    
     @IBOutlet weak var pictureView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
-
-    @IBOutlet weak var timeLabel: UILabel!
-    
-    @IBOutlet weak var bookmark: UIButton!
     
 }
